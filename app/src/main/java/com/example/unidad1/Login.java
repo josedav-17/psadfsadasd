@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class EntradaActivity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     Button btnLogin, link_to_register;
     EditText correo, password;
@@ -21,7 +21,7 @@ public class EntradaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_entrada);
+        setContentView(R.layout.activity_login);
 
         correo = findViewById(R.id.txtCorreo);
         password = findViewById(R.id.txtPass);
@@ -44,7 +44,7 @@ public class EntradaActivity extends AppCompatActivity {
                     String txtEmail=fila.getString(0);
                     String txtPass=fila.getString(1);
                     if (txtEmail.equals(email) && txtPass.equals(pass)) {
-                        Intent i = new Intent(EntradaActivity.this, Inicio.class);
+                        Intent i = new Intent(Login.this, Inicio.class);
                         startActivity(i);
                     }
                 }

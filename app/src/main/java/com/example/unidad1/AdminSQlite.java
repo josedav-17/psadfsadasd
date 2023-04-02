@@ -22,7 +22,6 @@ public class AdminSQlite extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("drop table if exists usuario");
-        db.execSQL("Create Table usuario(documento interger primary key, nombre text, email text)");
         db.execSQL("insert into usuarios values('admin admin')");
     }
 }
